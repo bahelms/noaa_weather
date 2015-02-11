@@ -1,0 +1,2 @@
+defmodule NoaaWeather do
+end
