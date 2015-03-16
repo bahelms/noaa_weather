@@ -11,12 +11,11 @@ defmodule NoaaWeather.Conditions do
 
   def handle_response({:ok, %{body: body}}) do
     Logger.info "Successful response"
-    # Logger.info fn -> inspect(body) end
-    {xml, _} = :xmerl_scan.string(to_char_list(body))
-    Logger.info inspect xml
+    parse_xml(body)
   end
 
   def handle_response({:error, %{status: status, body: body}}) do
     Logger.error "Error: #{status} returned"
   end
 end
+
