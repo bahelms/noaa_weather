@@ -1,6 +1,6 @@
 defmodule NoaaWeather.Conditions do
   require Logger
-  import XMLParser
+  import NoaaWeather.XMLParser
   @url Application.get_env(:noaa_weather, :conditions_url)
 
   def fetch(location_code) do

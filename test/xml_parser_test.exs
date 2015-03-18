@@ -1,6 +1,6 @@
 defmodule XMLParserTest do
   use ExUnit.Case
-  import XMLParser
+  import NoaaWeather.XMLParser
 
   def sample_noaa_xml do
     """

@@ -30,7 +30,7 @@ defmodule NoaaWeather.Mixfile do
   end
 
   defp escript_config do
-    # Package the program with mix: mix excript.build
+    # Package the program with mix: mix escript.build
     [main_module: NoaaWeather.CLI]
   end
 end

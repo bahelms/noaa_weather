@@ -1,4 +1,7 @@
 defmodule NoaaWeather.CLI do
+  alias NoaaWeather.Conditions
+  alias NoaaWeather.Formatter
+
   def main(argv) do
     parse_args(argv) |> process
   end
@@ -16,7 +19,7 @@ defmodule NoaaWeather.CLI do
   end
 
   def process(location_code) do
-    NoaaWeather.Conditions.fetch(location_code)
+    Conditions.fetch(location_code) |> Formatter.display
   end
 end
 
