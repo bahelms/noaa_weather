@@ -10,7 +10,6 @@ defmodule NoaaWeather.Conditions do
   end
 
   def handle_response({:ok, %{body: body}}) do
-    Logger.info "Successful response"
     parse_xml(body)
   end
 
